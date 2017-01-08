@@ -1,6 +1,8 @@
 import java.io.*;
 import java.net.*;
 
+//Java KnockKnock helped me to create the Server and the Client
+
 public class HangmanClient {
 
 	public static void main(String[] args) throws IOException {
@@ -13,9 +15,9 @@ public class HangmanClient {
 		String hostName = args[0];
 		int portNumber = Integer.parseInt(args[1]);
 
-		try (Socket kkSocket = new Socket(hostName, portNumber);
-				PrintWriter out = new PrintWriter(kkSocket.getOutputStream(), true);
-				BufferedReader in = new BufferedReader(new InputStreamReader(kkSocket.getInputStream()));) {
+		try (Socket hangSocket = new Socket(hostName, portNumber);
+				PrintWriter out = new PrintWriter(hangSocket.getOutputStream(), true);
+				BufferedReader in = new BufferedReader(new InputStreamReader(hangSocket.getInputStream()));) {
 			BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in));
 			String fromServer;
 			String fromUser;

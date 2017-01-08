@@ -1,6 +1,9 @@
 import java.util.Scanner;
 import java.util.Random;
 
+//Beginner Java: Lesson 3 [Building a Hangman game] Video
+//Helped me a lot!
+
 public class Hangman {
 	public static void main(String[] args) {
 		
@@ -28,8 +31,24 @@ public class Hangman {
 				printArray(guessWord);
 				System.out.printf("You have %d tries left.\n", amount - tries);
 				System.out.println("Enter a character!");
-				char input = s.nextLine().charAt(0);
+				char input = s.nextLine();
 				
+				if (input.length == 2 ) {
+					
+				}
+				
+				if (input == '-') {
+					playing = false;
+					guessed = true;
+				} else {
+					for (int i = 0; i < randomWord.length; i++) {
+						if (randomWord [i] == input) {
+							randomWord[i] = input;
+						}
+					}
+					
+					if (is)
+				}
 			}
 		}	
 	}

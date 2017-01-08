@@ -1,6 +1,8 @@
 import java.io.*;
 import java.net.*;
 
+//Java KnockKnock helped me to create the Server and the Client!
+
 public class HangmanServer {
 	public static void main(String[] args) throws IOException {
 
